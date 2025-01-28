@@ -7,14 +7,11 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    /* background-color: #f9f9f9; */
     background-color: #f9f9f9;
     color: #333;
     height: 100vh;
-    /* Ensure the body stretches to full viewport height */
     display: flex;
     flex-direction: column;
-    /* Align header, main, and footer vertically */
 }
 
 /* Header */
@@ -44,14 +41,15 @@ body {
     gap: 1rem;
 }
 
-.nav-links li {
-    display: inline;
-}
-
 .nav-links a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
+}
+
+.nav-links a.active {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .nav-links a:hover {
@@ -61,40 +59,64 @@ body {
 /* Main Content */
 .main-content {
     flex: 1;
-    /* Allow the main content to fill available space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
-    text-align: center;
-    flex-direction: column;
-    /* Center content vertically and horizontally */
+    padding: 2rem;
 }
 
-/* Hero Section */
-.hero-section h1 {
+.blog-section {
+    text-align: center;
+}
+
+.blog-section h1 {
     font-size: 2.5rem;
     color: #007acc;
     margin-bottom: 1rem;
 }
 
-.hero-section p {
+.blog-section p {
     font-size: 1.2rem;
+    color: #555;
     margin-bottom: 2rem;
 }
 
-.cta-button {
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.blog-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.blog-card h2 {
+    font-size: 1.5rem;
+    color: #007acc;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.read-more {
     display: inline-block;
     background-color: #007acc;
     color: #fff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.cta-button:hover {
+.read-more:hover {
     background-color: #005f99;
     color: #fff;
 }
